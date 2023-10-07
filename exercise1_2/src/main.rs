@@ -20,6 +20,27 @@ fn reduce_ten_times (mut balance: i32) {
 fn main() {
  // TODO: Create a variable representing the users starting balance, give it any value
  // TODO: Call the function you created and pass in the users starting balance
- let  balance = 6;
+ let balance = 6;
+ // scalar values will be passed by value by default to functions: i.e. making another copy rather than a value
  reduce_ten_times(balance);
+ // printing original balance will still result in 8
+ println!("User balance is still {}", balance); 
+ let mut mut_balance = 6;
+ reduce_ten_times_borrowed(&mut mut_balance);
+}
+
+// how to modify the actual value
+fn reduce_ten_times_borrowed ( balance: &mut i32) {
+ for _ in 1..=10 {
+    
+    *balance = *balance - 1;
+    if *balance < 0 {
+        break;
+    } else if *balance <= 3 {
+
+        println!("{}", *balance)
+    } else if *balance > 3 {
+        println!("Balance still above 3");
+    } 
+ }
 }
