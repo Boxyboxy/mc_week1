@@ -17,5 +17,20 @@ fn main() {
     // :? : usually used to print out a vector
     // This is a formatter
     println!("{} johns in {:?}", counter, user_vec);
+
+
+
+    println!("++++++++++++++++++++++++++++");
+    let v = vec![1, 2, 3, 4, 5];
+
+    println!("4th Element is {:?}", v.get(4)); // prints the type of data, :? another example of a formatter
+    println!("4th Element is {}", v.get(4).unwrap_or(&0)); // prints 4
+
+
+
+
+
 }
+
+
 

@@ -30,6 +30,8 @@ fn main() {
 }
 
 // how to modify the actual value
+// what is &mut, how would you recommend clearing up this confusion?
+
 fn reduce_ten_times_borrowed ( balance: &mut i32) {
  for _ in 1..=10 {
     
